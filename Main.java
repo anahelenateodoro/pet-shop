@@ -1,6 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-        // 1. Criar funcionários
         Funcionario tosador = new Funcionario("Zé da Tosa", "Tosa");
         Funcionario banhista = new Funcionario("Maria do Banho", "Banho");
 
