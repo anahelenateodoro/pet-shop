@@ -1,33 +1,45 @@
 public class Cliente {
-    private String nomeCliente;
+    private String nome;
     private String telefone;
     private String cpf;
-
     private String nomeAnimal;
     private String tipoAnimal;
 
-    private String servico;   
-    private String horario;   
-
-    public Cliente(String nomeCliente, String telefone, String cpf,
-                   String nomeAnimal, String tipoAnimal,
-                   String servico, String horario) {
-        this.nomeCliente = nomeCliente;
+    public Cliente(String nome, String telefone, String cpf, String nomeAnimal, String tipoAnimal) {
+        this.nome = nome;
         this.telefone = telefone;
         this.cpf = cpf;
         this.nomeAnimal = nomeAnimal;
         this.tipoAnimal = tipoAnimal;
-        this.servico = servico;
-        this.horario = horario;
     }
 
-    public String getDados() {
+    public String getNome() {
+        return nome;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public String getNomeAnimal() {
+        return nomeAnimal;
+    }
+
+    public String getTipoAnimal() {
+        return tipoAnimal;
+    }
+
+    public String getResumoCadastro() {
         return "===== Cadastro do Cliente =====\n" +
-               "Nome: " + nomeCliente + "\n" +
+               "Nome: " + nome + "\n" +
                "Telefone: " + telefone + "\n" +
                "CPF: " + cpf + "\n" +
-               "Animal: " + nomeAnimal + " (" + tipoAnimal + ")\n" +
-               "Serviço: " + servico + "\n" +
-               "Horário: " + horario + "\n";
+               "Nome do Animal: " + nomeAnimal + "\n" +
+               "Tipo do Animal: " + tipoAnimal + "\n";
     }
 }
+
