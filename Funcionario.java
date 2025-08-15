@@ -1,24 +1,30 @@
-public class Funcionario {
-    private String nome;
-    private String funcao; // "Banho" ou "Tosa"
+abstract class Funcionario {
+    protected String nome;
+    protected double salario;
+    protected String perfil;  // Ex: "Atendente", "Groomer", "Administrador"
 
-    // Construtor
-    public Funcionario(String nome, String funcao) {
+    public Funcionario(String nome, double salario, String perfil) {
         this.nome = nome;
-        this.funcao = funcao;
+        this.salario = salario;
+        this.perfil = perfil;
     }
 
-    // Getters (sem setters para simplificar)
     public String getNome() {
         return nome;
     }
 
-    public String getFuncao() {
-        return funcao;
+    public String getPerfil() {
+        return perfil;
     }
 
-    // Método para exibir info básica
-    public void mostrarDados() {
-        System.out.println("Funcionário: " + nome + " | Função: " + funcao);
+    public abstract void realizarServico(Servico servico, Pet pet);
+
+
+    public boolean podeGerarRelatorio() {
+        return perfil.equalsIgnoreCase("Administrador");
+    }
+
+    public boolean podeAgendar() {
+        return perfil.equalsIgnoreCase("Atendente") || perfil.equalsIgnoreCase("Administrador");
     }
 }
