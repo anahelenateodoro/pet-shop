@@ -4,8 +4,10 @@ class Servico {
     private String nome;
     private int duracaoServicoMinutos;
     private double preco;
+    private String funcionarioPerfil;
+    private String espacoUtilizado;
 
-    public Servico(String categoria, String nome,int duracaoServicoMinutos, double preco) {
+    public Servico(String categoria, String nome,int duracaoServicoMinutos, double preco, String funcionarioPerfil, String espacoUtilizado) {
         //tratamento de exceçao
         if(preco < 0){
             throw new IllegalArgumentException("O preco do serviço nao poder ser negativo");
@@ -19,6 +21,8 @@ class Servico {
         this.nome = nome;
         this.duracaoServicoMinutos = duracaoServicoMinutos;
         this.preco = preco;
+        this.funcionarioPerfil = funcionarioPerfil;
+        this.espacoUtilizado = espacoUtilizado;
     }
 
     //metodos e modificadores de acesso
@@ -36,6 +40,14 @@ class Servico {
 
     public double getPreco() {
         return preco;
+    }
+
+    public String getFuncionarioPerfil() {
+        return funcionarioPerfil;
+    }
+
+    public String getEspacoUtilizado() {
+        return espacoUtilizado;
     }
 
 }
