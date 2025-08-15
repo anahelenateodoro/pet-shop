@@ -5,7 +5,7 @@ class Pet {
     private int idade;
     private String porte;
 
-    public Pet(String especie, String nome,String raca, Integer idade, String porte) {
+    public Pet(String especie, String nome, String raca, int idade, String porte) {
         this.especie = especie;
         this.nome = nome;
         this.raca = raca;
@@ -32,5 +32,4 @@ class Pet {
     public String getPorte() {
         return porte;
     }
-
 }
