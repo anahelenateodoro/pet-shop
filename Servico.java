@@ -1,4 +1,4 @@
-class Servico {
+public class Servico {
     //usando encapsulamento
     private String categoria;
     private String nome;

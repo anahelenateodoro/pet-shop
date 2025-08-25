@@ -1,4 +1,4 @@
-abstract class Funcionario {
+public abstract class Funcionario {
     protected String nome;
     protected double salario;
     protected String perfil;  // Ex: "Atendente", "Groomer", "Administrador"
